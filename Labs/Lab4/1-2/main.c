@@ -36,7 +36,7 @@ int main(int argc, char ** argv) {
     // insertionSort(dataBase, fileSize);
     mergeSort(dataBase, fileSize);
     end = clock();
-    printDatabase(dataBase, fileSize);
+    // printDatabase(dataBase, fileSize);
 
     double x = (double)(end - start)*1000/CLOCKS_PER_SEC;
     printf("Time taken : %lf\n", x);

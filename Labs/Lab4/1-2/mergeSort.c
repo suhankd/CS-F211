@@ -6,7 +6,8 @@ void Merge(person *arr, int left, int mid, int right)
     int n1 = mid - left + 1;
     int n2 = right - mid;
 
-    person leftArr[n1], rightArr[n2];
+    person *leftArr = (person *)malloc(sizeof(person) * n1);
+    person * rightArr = (person *)malloc(sizeof(person) * n2);
 
     // Populate subarrays
 

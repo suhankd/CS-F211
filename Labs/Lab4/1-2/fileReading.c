@@ -14,6 +14,12 @@ person *readFile(char *fileName)
     }
     person *dataStruct = (person *)malloc(sizeof(person) * fileSize);
 
+    if(dataStruct == NULL) {
+
+        fprintf(stderr, "Memory allocation failed!\n");
+        return NULL;
+    }
+
     for (int i = 0; i < fileSize; i++)
     {
 
@@ -36,6 +42,12 @@ person *readFile(char *fileName)
                &dataStruct[i].age,
                &dataStruct[i].height,
                &dataStruct[i].weight);
+
+        // printf("%s, %d, %d, %d\n",
+        //     dataStruct[i].name,
+        //     dataStruct[i].age,
+        //     dataStruct[i].height,
+        //     dataStruct[i].weight);
     }
 
     fclose(file);
