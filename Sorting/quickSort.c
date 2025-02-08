@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void swap(int *a, int *b);
+
 int main(int argc, char **argv)
 {
 
@@ -12,6 +14,12 @@ int main(int argc, char **argv)
         arr[i] = atoi(argv[i + 1]);
     }
 
-        
 
+}
+void swap(int *a, int *b)
+{
+
+    int _ = *a;
+    *a = *b;
+    *b = _;
 }
