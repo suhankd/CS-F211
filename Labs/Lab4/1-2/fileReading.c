@@ -28,14 +28,19 @@ person *readFile(char *fileName)
                "%d,", &_);
 
         int stringSize = 0;
+    #define MAX_SIZE 100
+        char num[MAX_SIZE];
 
-        for (char c = getc(file); c != ','; c = getc(file))
+        memset(num, 0, MAX_SIZE);
+
+        for (char c = getc(file); stringSize < MAX_SIZE - 1 && c != ',' ; c = getc(file))
         {
-
-            dataStruct[i].name[stringSize++] = c;
+            num[stringSize++] = c;
         }
 
-        dataStruct[i].name[stringSize] = '\0';
+        num[stringSize] = 0;
+        strncpy(dataStruct[i].name, num, MAX_SIZE);       
+
 
         fscanf(file,
                "%d,%d,%d\n",

@@ -49,6 +49,9 @@ void Merge(person *arr, int left, int mid, int right)
     {
         arr[k++] = rightArr[j++];
     }
+
+    free(leftArr);
+    free(rightArr);
 }
 
 void mergeSort(person * arr, int n)

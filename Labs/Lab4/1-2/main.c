@@ -32,7 +32,6 @@ int main(int argc, char ** argv) {
 
     int fileSize = numLines(argv[1]);
 
-    start = clock();
     // insertionSort(dataBase, fileSize);
     mergeSort(dataBase, fileSize);
     end = clock();
